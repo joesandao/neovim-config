@@ -1,3 +1,4 @@
+vim.cmd.packadd "packer.nvim"
 local status, packer = pcall(require, 'packer')
 if (not status) then
   print("Packerがインストールされてねえぞ")
@@ -12,4 +13,5 @@ packer.startup(function(use)
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }
   }
+  use 'github/copilot.vim'
 end)
